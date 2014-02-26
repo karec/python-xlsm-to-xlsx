@@ -44,12 +44,10 @@ def to_xlsx(fname, *filenames):
 def update_files(filename, data):
     """
     This function dispatch the data for return good xml values
+    Use it if you need to update more files
     """
     if '[Content_Types].xml' in filename:
         return update_content_types(data)
-    elif 'workbook' in filename:
-        return update_workbook(data)
-
 
 def update_content_types(data):
     """
